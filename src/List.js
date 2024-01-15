@@ -40,7 +40,9 @@ export default function List({ records, addToList }){
                        <img className="moviePoster" src={movie.Poster}></img>
                      </td>
                      <td data-cell="add">
-                       <button onClick={() => {
+                       <button 
+                       className="addButton"
+                       onClick={() => {
                          addToList({movie})
                        }}>Add</button>
                      </td>

@@ -51,33 +51,35 @@ export default function UserList({userLastList, setUserLastList}){
           <th>Delete from Your List</th>
         </tr>
         {records.map((movie) => (
-          <tr>
-            <td key={movie.title}>
+          <tr key={movie.Title}>
+            <td data-cell="title">
               {movie.title}
             </td>
-            <td key={movie.imdbRating}>
+            <td data-cell="imdb">
               {movie.imdbRating}
             </td>
-            <td key={movie.genre}>
+            <td data-cell="genre">
               {movie.genre}
             </td>
-            <td key={movie.plot}>
+            <td data-cell="plot">
               {movie.plot}
             </td>
-            <td key={movie.director}>
+            <td data-cell="director">
               {movie.director}
             </td>
-            <td key={movie.actors}>
+            <td data-cell="title">
               {movie.actors}
             </td>
-            <td key={movie.Title + movie.year}>
+            <td data-cell="year">
               {movie.year}
             </td>
-            <td  key={movie.poster}>
+            <td data-cell="poster">
               <img className="moviePoster" src={movie.poster}></img>
             </td>
-            <td>
-              <button onClick={() => (
+            <td data-cell="delete">
+              <button
+               className='deleteButton'
+               onClick={() => (
                 movieDelete({ movie })
               )}>Delete</button>
             </td>

@@ -2,17 +2,24 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
 }
 .tablesArea{
   background-color: #F4DFC8;
+  padding-bottom: 0;
+  margin-bottom: -10px;
 }
 body {
-  background-color: black;
+  background-color: rgb(206, 37, 37);
+  
 
   margin: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
+.page-link{
+  background-color: black;
+  color: red;
+}
 .topof{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -51,8 +58,8 @@ body {
   
 }
 .moviePoster {
-  
-  max-width: 100%;
+  width: 100px;
+  /* max-width: 100%; */
   height: auto;
 }
 
@@ -73,10 +80,11 @@ table{
 
 .selectClass {
   background-color: transparent;
-  color: rgb(224, 89, 89);
+  color: rgb(247, 176, 176);
   font-size: 25px;
-  font-weight: bolder;
+  font-weight:500;
   border: none;
+  background-color: rgb(49, 45, 45);
 }
 
 
@@ -134,4 +142,22 @@ tr:nth-of-type(2n) {
   .topof{
     display: block;
   }
+}
+
+.addButton{
+  background-color: transparent;
+  width: 60px;
+  color: white;
+  opacity: 0.6;
+}
+
+.deleteButton{
+  background-color: transparent;
+  width: 60px;
+  color: rgb(255, 0, 0);
+  opacity: 0.6;
+}
+
+.addButton:hover, .deleteButton:hover{
+  opacity: 1;
 }

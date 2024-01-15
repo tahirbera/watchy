@@ -6,19 +6,7 @@ import SeriesArray from "./series";
 import CartoonArray from "./cartoons";
 
 
-const userList = [
-    {
-      id: 0,
-      title: 'First Movie',
-      imdbRating: 7.7,
-      genre: 'Action',
-      plot: 'This movie is so scary',
-      director: 'Bera',
-      actors: 'Herry, Merry, Jenny, Penny',
-      year: '0010',
-      poster: 'https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg'
-    }
-  ]
+const userList = []
 
 export default function  MovieList(){
     const [userLastList, setUserLastList] = useState(userList);
@@ -122,7 +110,7 @@ export default function  MovieList(){
                      <td data-cell="director">
                        {movie.Director}
                      </td>
-                     <td data-cell="title">
+                     <td data-cell="actors">
                        {movie.Actors}
                      </td>
                      <td data-cell="year">
@@ -132,7 +120,9 @@ export default function  MovieList(){
                        <img className="moviePoster" src={movie.Poster}></img>
                      </td>
                      <td data-cell="add">
-                       <button onClick={() => {
+                       <button
+                       className="addButton"
+                        onClick={() => {
                          addToList({movie})
                        }}>Add</button>
                      </td>
