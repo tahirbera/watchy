@@ -34,8 +34,10 @@ export default function UserList({userLastList, setUserLastList}){
     return(
       <>
       <div className='tables'>
-      <h3>Watch List</h3>
       
+      <select className='selectClass withoutArrow'>
+        <option>Watch List</option>
+      </select>
       <table className="movieTable">
         <tr>
           <th>Movie Name</th>

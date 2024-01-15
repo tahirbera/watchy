@@ -74,7 +74,9 @@ export default function  MovieList(){
         <div className="listAreaItem1">
 
           
-          <select onChange={(e) => {
+          <select
+            className="selectClass"
+             onChange={(e) => {
             const selectedOpinion = e.target.value;
             if (selectedOpinion === 'Movie') {
               setArrayName(MoviesArray);
@@ -151,7 +153,8 @@ export default function  MovieList(){
         
         <nav>
           <ul className="pagination">
-              <li className="page-item">
+              <li              
+              className="page-item">
                 <a href='#' 
                 className="page-link"
                 onClick={((e) => {
