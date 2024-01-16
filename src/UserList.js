@@ -1,8 +1,13 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './App.css';
+import { useReactToPrint } from 'react-to-print';
 
   
 export default function UserList({userLastList, setUserLastList}){
+  const componentPDF = useRef();
+
+
+
 
     const [currentPage, setCurrentPage] = useState(1);
     const recordsPerPage = 5;
@@ -31,13 +36,22 @@ export default function UserList({userLastList, setUserLastList}){
       setUserLastList(thisList);
   
     }
+    
+    const generatePDF=useReactToPrint({
+      content: () => componentPDF.current,
+      documentTitle: "WatchList",
+      onAfterPrint: () => alert("List saved in PDF")
+    })
+
     return(
+
       <>
       <div className='tables'>
-      
+      <button onClick={generatePDF}>PDF</button>
       <select className='selectClass withoutArrow'>
         <option>Watch List</option>
       </select>
+      <div ref={componentPDF} style={{'width':'100%'}}>
       <table className="movieTable">
         <tr>
           <th>Movie Name</th>
@@ -86,7 +100,7 @@ export default function UserList({userLastList, setUserLastList}){
           </tr>
         ))}
         </table>
-        
+        </div>
         <nav>
           <ul className="pagination">
               <li className="page-item">
