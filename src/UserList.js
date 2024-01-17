@@ -47,10 +47,13 @@ export default function UserList({userLastList, setUserLastList}){
 
       <>
       <div className='tables'>
-      <button onClick={generatePDF}>PDF</button>
+        
       <select className='selectClass withoutArrow'>
         <option>Watch List</option>
       </select>
+      &nbsp;
+      <button className='selectClass withoutArrow' onClick={generatePDF}>&nbsp;PDF /for this page of watch list</button>
+
       <div ref={componentPDF} style={{'width':'100%'}}>
       <table className="movieTable">
         <tr>
