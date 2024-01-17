@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+.tablesArea{
+  background-color: #F4DFC8;
+  padding-bottom: 0;
+  margin-bottom: -10px;
+}
+body {
+  background-color: rgb(206, 37, 37);
+  
+
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.page-link{
+  background-color: black;
+  color: red;
+}
+.topof{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  height: 900px;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  text-align: left;
+  background-image: url('watchlist.jpg');
+  background-repeat: none;
+}
+
+
+
+.listing {
+  background-color: black;
+  text-align: center;
+  margin: auto;
+  border-bottom: 1px solid rgb(206, 203, 203);
+}
+
+.listArea{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 10px;
+  overflow: hidden;
+}
+.listAreaItem1{
+  margin-right: 10px;
+  
+}
+.moviePoster {
+  width: 100px;
+  /* max-width: 100%; */
+  height: auto;
+}
+
+.tableArea{
+  background-color: black;
+}
+
+
+
+.withoutArrow {
+  margin-bottom: -13px;
+}
+
+
+table{
+  width: 100%;
+  background: #323232;
+  border-collapse: collapse;
+  color: white;
+}
+
+.selectClass {
+  background-color: transparent;
+  color: rgb(247, 176, 176);
+  font-size: 25px;
+  font-weight:500;
+  border: none;
+  background-color: rgb(49, 45, 45);
+}
+
+
+th,
+td {
+  padding: 1rem;
+}
+
+th{
+  text-align: left;
+  background-color: hsl( 0 0% 0% / 0.5);
+}
+
+tr:nth-of-type(2n) {
+  background-color: hsl( 0 0% 0% / 0.1);
+
+}
+
+@media (max-width: 800px) {
+  th {
+    display: none;
+  }
+
+  td {
+    display: grid;
+    padding: 0.5rem 1rem;
+    grid-template-columns: 15ch auto;
+  }
+
+  td::before{
+    content: attr(data-cell) ": ";
+    text-transform: capitalize;
+  }
+
+  td:first-child {
+    padding-top: 2rem;
+  }
+
+  td:last-child {
+    padding-bottom: 2rem;
+  }
+
+  .moviePoster {
+    width: 50%;
+    height: auto;
+  }
+
+  .logo{
+    font-size: 20px;
+  }
+
+  .listArea{
+    display: block;
+  }
+  .topof{
+    display: block;
+  }
+}
+
+.addButton{
+  background-color: transparent;
+  width: 60px;
+  color: white;
+  opacity: 0.6;
+}
+
+.deleteButton{
+  background-color: transparent;
+  width: 60px;
+  color: rgb(255, 0, 0);
+  opacity: 0.6;
+}
+
+.addButton:hover, .deleteButton:hover{
+  opacity: 1;
+}
